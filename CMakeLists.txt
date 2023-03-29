@@ -509,8 +509,8 @@ set(CXX_COMMON_FLAGS -Wall -Wextra -pedantic -Wcast-qual -Wredundant-decls -Wfor
 target_compile_options(OpenSTA
   PRIVATE
   $<$<CXX_COMPILER_ID:GNU>:${CXX_COMMON_FLAGS}>
-  $<$<CXX_COMPILER_ID:AppleClang>:${CXX_COMMON_FLAGS} -Wno-gnu-zero-variadic-macro-arguments>
   $<$<CXX_COMPILER_ID:Clang>:${CXX_COMMON_FLAGS} -Wno-gnu-zero-variadic-macro-arguments>
+  $<$<CXX_COMPILER_ID:AppleClang>:${CXX_COMMON_FLAGS} -Wno-gnu-zero-variadic-macro-arguments>  
   )
 
 # Disable compiler specific extensions like gnu++11.
